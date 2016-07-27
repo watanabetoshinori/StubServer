@@ -1,7 +1,5 @@
 # StubServer
 
-## Description
-
 **StubServer** is a Simple stub class for your network request.
 
 ## Installation
@@ -12,7 +10,7 @@ Clone this repository and import `StubServer.swift` inside Xcode (drag & drop).
 
 ### Basic Example
 
-```
+```swift
 let server = StubServer()
 
 server.get("/api") { request, response in
@@ -24,7 +22,7 @@ server.run()
 
 ### Advanced Example
 
-```
+```swift
 // Specified the host
 let server = StubServer(host: "example.com")
 
@@ -60,9 +58,7 @@ server.run()
 
 You need to set stub protocol to `protocolClasses` when using NSURLSessionConfiguration.
 
-```
-let url = NSURL(string: "http://example.com/api")
-
+```swift
 let config = NSURLSessionConfiguration.defaultSessionConfiguration()
 config.protocolClasses = [StubServer.protocolClass]
 
